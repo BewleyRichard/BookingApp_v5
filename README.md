@@ -1,15 +1,56 @@
 ## Capstone Project Part I: Define Your Product
 Project: Accommodation Booking App Using the MERN Stack.
 
-### How to use the App
+### How to use the Booking App
 
-### Run the App
+Please register or log in to start viewing available accommodations. You can use the search bar to find accommodations that meet your trip criteria. Enter your desired location, dates of stay, and number of guests, and you will be presented with a list of available accommodations.
+
+From there, you can select individual accommodations to view more details about them such as photos of the accomdation. Once you've found an accommodation you like, you can view and reserve available rooms. Don't forget to check the room's availability and pricing before making your reservation. 
+
+### How to use the Admin Dashboard App
+
+To access the dashboard app, please sign in using an admin account. The admin username is "admin" and the password is "ABC123". Once you have signed in, you will be able to view the all users, hotels, and rooms stored in the database.
+
+In addition, you will have access to several management features that allow you to perform various tasks related to the booking app such as adding new users,hotels and rooms, and editing hotels by adding available rooms to them.
+
+### Mongo DB 
+In this project, MongoDB is used as the primary database. If you wish to use your own MongoDB instance for this project, you can do so by applying the connection URL of your database to the MONGO_URI variable in the following file: "/BookingApp_v5/api/.env".
+
+Please note that you will need to ensure that your MongoDB instance meets the requirements of this application. Specifically, the database should have the necessary collections and fields as specified in the data schema that can be found here: "/BookingApp_v5/api/models"
+
+### Run
+To run the server: 
+Open a terminal in this file's directory "/BookingApp_v5/api"
+Run npm run dev to start the server.  
+
+To run the booking app: 
+First run the server. 
+Then open a terminal in this file's directory "/BookingApp_v5/client"
+Run: npm start to run the app. 
+
+To run the Admin dashboard app:
+First run the server. 
+Then open a terminal in this file's directory "/BookingApp_v5/adminDashboard"
+Run: npm start to run the app.
+
+To run a unit test: 
+Open a terminal in this file's directory "\BookingApp4\unitTesting"
+Run: npm test to run the test and see results
 
 ### Security Features
+To ensure the security of the apps, both JWT and bcrypt are used in the  authentication process. JWT, or JSON Web Tokens, are a popular method for securely transmitting information between parties. In this app, JWT for the creation of a unique token for each user when they log in. This token is then stored in the user's browser and sent with each subsequent request to authenticate the user.
+
+In addition to JWT, bcrypt is used to securely store user passwords in the database. Bcrypt is a powerful encryption tool that takes a user's password and encrypts it using a one-way hash function. This means that even if a hacker were to gain access to the database, they would not be able to read the actual passwords.
+
+In order to adjust the JWT in this project see this file "/BookingApp_v5/api/.env"
 
 ### Third-party APIs
+https://cloudinary.com
+In this project, Cloudinary is used as an image management service. Cloudinary is a cloud-based platform that allows admin to securely upload, store, and manage images for this application.
 
 ### Deployment 
+https://www.heroku.com
+These applications have been deployed using Heroku, a cloud platform that allows for easily deployment, management, and scaling of both the backend and front end of these applications.  
 
 ### Software Requirements
 
