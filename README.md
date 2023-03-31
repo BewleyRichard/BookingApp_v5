@@ -50,7 +50,8 @@ In this project, Cloudinary is used as an image management service. Cloudinary i
 
 ### Deployment 
 https://www.heroku.com
-These applications have been deployed using Heroku, a cloud platform that allows for easily deployment, management, and scaling of both the backend and front end of these applications.  
+These applications have been deployed using Heroku, a cloud platform that allows for easily deployment, management, and scaling of both the backend and front end of these applications.
+You can find the apps deployed here: "PENDING". 
 
 ### Software Requirements
 
