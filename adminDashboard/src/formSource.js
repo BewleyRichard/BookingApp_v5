@@ -1,3 +1,5 @@
+// Sets inputs for all forms. 
+
 export const userInputs = [
   {
     id: "username",

@@ -7,6 +7,7 @@ import useFetch from "../../hooks/useFetch";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+// Handles allowing admin to add rooms to an existing hotel in the database based on its name. 
 
 const NewRoom = () => {
   const [info, setInfo] = useState({});
@@ -17,10 +18,11 @@ const NewRoom = () => {
 
   const { data, loading, error } = useFetch("/hotels");
 
+  // Updates the state based on input field entres. 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
-
+  // Submits a new room to the database, applies correct formatting for the body using map/split. 
   const handleClick = async (e) => {
     e.preventDefault();
     const roomNumbers = rooms.split(",").map((room) => ({ number: room }));
@@ -29,10 +31,10 @@ const NewRoom = () => {
     } catch (err) {
       console.log(err);
     }
-
+    // Navigates the user back to the rooms data table on submission. 
     navigate("/rooms")
   };
-
+  // Renders the input form. 
   console.log(info)
   return (
     <div className="new">

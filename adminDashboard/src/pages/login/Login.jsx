@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
+// Same as login.js in in "client/src/pages/Login/Login.js", re-used this here. See file for comments. 
 
 const Login = () => {
   const [credentials, setCredentials] = useState({

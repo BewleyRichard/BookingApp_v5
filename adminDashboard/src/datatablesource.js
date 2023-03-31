@@ -1,3 +1,5 @@
+// Sets all fields for datatable columns. 
+
 export const userColumns = [
   { field: "id", headerName: "ID", width: 70 },
   {

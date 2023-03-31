@@ -8,8 +8,9 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 
-
-
+/* This component displays a navigation sidebar for an admin dashboard. 
+It imports useNavigate hook and useContext hook to get access to the current route 
+and the context for dark mode. Dispatches logout, and light/dark mode.  */
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Sidebar = () => {
     navigate("/login")
 }
 
-
+// Rendors links for users, hotels, rooms, darkmode and logout. 
   return (
     <div className="sidebar">
       <div className="top">

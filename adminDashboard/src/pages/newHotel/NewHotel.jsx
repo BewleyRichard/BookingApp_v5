@@ -8,6 +8,7 @@ import useFetch from "../../hooks/useFetch";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+// Handles the form for creating a new hotel. 
 
 const NewHotel = () => {
   const [files, setFiles] = useState("");
@@ -15,9 +16,9 @@ const NewHotel = () => {
   const [rooms, setRooms] = useState([]);
   const navigate = useNavigate()
 
-
+ // Fetches data about the available rooms from the server.
   const { data, loading, error } = useFetch("/rooms");
-
+  // Updates the info state variable whenever a form field changes.
   const handleChange = (e) => {
 
     if (e.target.id === "cheapestPrice") {
@@ -28,7 +29,7 @@ const NewHotel = () => {
     }
 
   };
-
+  // Updates the rooms state variable whenever the user selects one or more rooms from a dropdown list.
   const handleSelect = (e) => {
     const value = Array.from(
       e.target.selectedOptions,
@@ -36,7 +37,7 @@ const NewHotel = () => {
     );
     setRooms(value);
   };
-  
+  // Handles submission of info and uploads images to cloudinary. 
   const handleClick = async (e) => {
     e.preventDefault();
     try {
@@ -56,7 +57,7 @@ const NewHotel = () => {
           })
         );
       }
-
+      // Creates a new hotel object. 
       const newhotel = {
         ...info,
         rooms,
@@ -64,19 +65,19 @@ const NewHotel = () => {
       };
       console.log(newhotel)
 
-
+      // Posts the new hotel to the server. 
       await axios.post("/hotels", newhotel);
       navigate("/hotels");
     } catch (err) {
       console.log(err);
     }
-    
+    // Navigates back to hotel datatable. 
     navigate("/hotels")
 
 
   };
   
-
+  // Renders input form, and previews an image if present. 
   return (
     <div className="new">
       <Sidebar />

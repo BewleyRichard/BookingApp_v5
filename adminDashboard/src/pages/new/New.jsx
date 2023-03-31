@@ -6,19 +6,22 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+// Handles the form for new user input. 
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
   const [info, setInfo] = useState({});
   const navigate = useNavigate()
 
-
+  // Updates the info state variable as the user inputs data into the form.
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
 
-
+  /* When the user clicks the "Send" button. It creates a new user object by
+  merging the info state variable and img (if a file was uploaded) using the spread operator. 
+  It then makes an HTTP POST request to the server to create a new user. */
   const handleClick = async (e) => {
     e.preventDefault();
     const newUser = { ...info };
@@ -27,7 +30,8 @@ const New = ({ inputs, title }) => {
       const data = new FormData();
       data.append("file", file);
       data.append("upload_preset", "upload");
-  
+      /* If an image was uploaded, the file is uploaded to a cloudinary server 
+      and updates the newUser.img property with the URL of the uploaded image. */
       try {
         const uploadRes = await axios.post(
           "https://api.cloudinary.com/v1_1/duq61sgxt/image/upload",
@@ -50,7 +54,7 @@ const New = ({ inputs, title }) => {
     navigate("/users")
 
   };
-
+  // Renders a form with inputs for user information and an input for an image file. 
   return (
     <div className="new">
       <Sidebar />

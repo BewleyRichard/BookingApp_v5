@@ -3,6 +3,8 @@ import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
 
+// Renders the navbar and handles the dark mode toggle icon on the navbar. 
+
 const Navbar = () => {
   const { dispatch } = useContext(DarkModeContext);
 

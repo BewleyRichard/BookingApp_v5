@@ -1,6 +1,10 @@
+/* This component renders a table using the DataGrid component from the @mui/x-data-grid package. 
+It takes a data array as a prop. It also renders an Add New" link that uses the path parameter 
+to create a new resource. It also renders a "Delete" button for each row, that handles the deletion 
+of users, hotels or rooms.*/
+
 import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns } from "../../datatablesource";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
@@ -12,9 +16,8 @@ const Datatable = ({columns}) => {
   const path = location.pathname.split("/")[1];
   
   const [list, setList] = useState([]);
-  // const [data, setData] = useState(userRows);
   const {data, loading, error} = useFetch(`/${path}`);
-  //issue
+
   useEffect(()=>{
     setList(data)
   },[data]) 
@@ -25,9 +28,6 @@ const Datatable = ({columns}) => {
       setList(list.filter((item) => item._id !== id));
     } catch (err) {}
   };
-
-
-
 
   const actionColumn = [
     {
@@ -70,6 +70,3 @@ const Datatable = ({columns}) => {
 };
 
 export default Datatable;
-
-
-// bug data list! refresh page on delete button
