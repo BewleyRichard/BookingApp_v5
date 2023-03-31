@@ -15,7 +15,6 @@ const NewRoom = () => {
   const [rooms, setRooms] = useState([]);
   const navigate = useNavigate()
 
-
   const { data, loading, error } = useFetch("/hotels");
 
   // Updates the state based on input field entres. 
@@ -25,6 +24,7 @@ const NewRoom = () => {
   // Submits a new room to the database, applies correct formatting for the body using map/split. 
   const handleClick = async (e) => {
     e.preventDefault();
+
     const roomNumbers = rooms.split(",").map((room) => ({ number: room }));
     try {
       await axios.post(`/rooms/${hotelId}`, { ...info, roomNumbers });
@@ -35,7 +35,8 @@ const NewRoom = () => {
     navigate("/rooms")
   };
   // Renders the input form. 
-  console.log(info)
+
+
   return (
     <div className="new">
       <Sidebar />
@@ -68,8 +69,11 @@ const NewRoom = () => {
               <div className="formInput">
                 <label>Choose a hotel</label>
                 <select
-                  id="hotelId"
-                  onChange={(e) => setHotelId(e.target.value)}
+                  id="hotelName"
+                  onChange={(e) => {
+                    setHotelId(e.target.value);
+                    }
+                  }
                 >
                   {loading
                     ? "loading"

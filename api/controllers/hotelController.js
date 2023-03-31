@@ -61,6 +61,8 @@ export const getHotel = async (req,res,next) => {
     }
 };
 
+
+
 // Get all hotels controller function. 
 export const getHotels = async (req, res, next) => {
     const { limit, min, max, ...others } = req.query;
