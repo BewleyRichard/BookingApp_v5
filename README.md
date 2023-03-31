@@ -5,7 +5,7 @@ Project: Accommodation Booking App Using the MERN Stack.
 
 Please register or log in to start viewing available accommodations. You can use the search bar to find accommodations that meet your trip criteria. Enter your desired location, dates of stay, and number of guests, and you will be presented with a list of available accommodations.
 
-From there, you can select individual accommodations to view more details about them such as photos of the accomdation. Once you've found an accommodation you like, you can view and reserve available rooms. Don't forget to check the room's availability and pricing before making your reservation. 
+From there, you can select an individual accommodation to view in more detail. Once you've found an accommodation you like, you can view and reserve available rooms. Don't forget to check the room's availability and pricing before making your reservation. 
 
 ### How to use the Admin Dashboard App
 
