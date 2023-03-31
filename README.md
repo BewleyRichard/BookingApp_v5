@@ -1,6 +1,16 @@
 ## Capstone Project Part I: Define Your Product
 Project: Accommodation Booking App Using the MERN Stack.
 
+### How to use the App
+
+### Run the App
+
+### Security Features
+
+### Third-party APIs
+
+### Deployment 
+
 ### Software Requirements
 
 ### System Architecture Considerations
