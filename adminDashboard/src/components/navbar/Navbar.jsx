@@ -1,4 +1,4 @@
-import "./navbar.scss";
+import "./navbar.css";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";

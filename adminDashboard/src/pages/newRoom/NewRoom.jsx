@@ -1,7 +1,6 @@
 import "./newRoom.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
-import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 import { roomInputs } from "../../formSource";
 import useFetch from "../../hooks/useFetch";
@@ -61,7 +60,7 @@ const NewRoom = () => {
                 <label>Rooms</label>
                 <textarea
                   onChange={(e) => setRooms(e.target.value)}
-                  placeholder="give comma between room numbers."
+                  placeholder="Insert comma between room numbers."
                 />
               </div>
               <div className="formInput">
