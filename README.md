@@ -53,7 +53,7 @@ https://www.heroku.com
 These applications have been deployed using Heroku, a cloud platform that allows for easily deployment, management, and scaling of both the backend and front end of these applications.
 You can find the apps deployed here: 
 Booking app: https://bookingapphypdev.herokuapp.com
-Admin Dashboard:
+Admin Dashboard: https://admindashhypdev.herokuapp.com
 
 
 ### Software Requirements
